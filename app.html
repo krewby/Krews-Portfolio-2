@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+
+    <style>
+        body {
+            background-color: #222;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .box {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 10</p>
+
+        <input id="guess" type="number" min="1" max="10">
+        <br>
+        <button onclick="checkGuess()">Submit Guess</button>
+        <button onclick="resetGame()">Reset</button>
+
+        <p id="result"></p>
+        <p id="attempts"></p>
+    </div>
+
+    <br><br>
+    <a href="scratch.html" style="color: lightblue;">Back to Scratch Page</a>
+
+    <script>
+        let number = Math.floor(Math.random() * 10) + 1;
+        let tries = 0;
+
+        function checkGuess() {
+            let guess = document.getElementById("guess").value;
+            tries++;
+
+            if (guess == number) {
+                document.getElementById("result").innerText = "🎉 Correct! You guessed it!";
+            } else if (guess < number) {
+                document.getElementById("result").innerText = "Too low. Try again.";
+            } else {
+                document.getElementById("result").innerText = "Too high. Try again.";
+            }
+
+            document.getElementById("attempts").innerText = "Attempts: " + tries;
+        }
+
+        function resetGame() {
+            number = Math.floor(Math.random() * 10) + 1;
+            tries = 0;
+            document.getElementById("result").innerText = "";
+            document.getElementById("attempts").innerText = "";
+            document.getElementById("guess").value = "";
+        }
+    </script>
+
+</body>
+</html>
