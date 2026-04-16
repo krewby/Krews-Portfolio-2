@@ -2,83 +2,163 @@
 <html>
 <head>
     <title>My Scratch Page</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <style>
+        body {
+            background: linear-gradient(to right, #d3d3d3, #f8f9fa);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .card {
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .fun-title {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+        }
+
+        img {
+            border-radius: 15px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+        }
+
+        .tableauPlaceholder {
+            margin-top: 40px;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-custom {
+            margin: 10px;
+            border-radius: 25px;
+        }
+    </style>
 </head>
 
-<body style="background-color: lightgray;">
+<body>
 
-    <!-- Anchor target -->
-    <h1 id="top">My Favorite Hobby: Basketball</h1>
+<div class="container">
 
-    <!-- Ordered + Unordered List -->
-    <h2>Why I Like It</h2>
-    <ol>
-        <li>Fun to play
-            <ul>
-                <li>Fast paced</li>
-                <li>Competitive</li>
-            </ul>
-        </li>
-        <li>Good exercise</li>
-        <li>Social activity</li>
-    </ol>
+    <!-- Header -->
+    <h1 id="top">🏀 Life, Laughs & Layups 🏀</h1>
+    <p class="fun-title">Because life is better when you're slightly out of breath</p>
 
-    <!-- Image -->
-    <h2>My Favorite Player</h2>
-    <img src="basketball.jpg" width="300">
+    <!-- Why I Like It -->
+    <div class="card p-4">
+        <h2>Why I Like It (and why you should too)</h2>
+        <ol>
+            <li>Fun to play
+                <ul>
+                    <li>Fast paced (aka I get tired quickly)</li>
+                    <li>Competitive (even in pickup games 😤)</li>
+                </ul>
+            </li>
+            <li>Good exercise (cheaper than therapy)</li>
+            <li>Social activity (friends + trash talk = bonding)</li>
+        </ol>
+    </div>
 
-    <!-- YouTube Video -->
-    <h2>Highlight Video</h2>
-    <iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-    </iframe>
-    <!-- Div Sections -->
-    <div class="box1">
-    <h3>Why I Love Basketball</h3>
-    <p>Basketball is one of my favorite hobbies because it is fast-paced, competitive, and fun. It helps me stay active while also improving my teamwork and discipline.</p>
+    <!-- Favorite Player -->
+    <div class="card p-4 text-center">
+        <h2>My Favorite Player</h2>
+        <p>One day… this could be me. Probably not, but let me dream.</p>
+        <img src="basketball.jpg" width="300">
+    </div>
+
+    <!-- Video -->
+    <div class="card p-4 text-center">
+        <h2>Highlight Video</h2>
+        <p>Prepare to be inspired (or confused… depends if you click it)</p>
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Sections -->
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Why I Love It</h3>
+                <p>Basketball isn’t just a game—it’s a lifestyle. It’s where sweat meets dreams and where I convince myself I could’ve gone D1 if I was just… taller.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Skills I've Developed</h3>
+                <p>From clutch shots (occasionally) to teamwork and leadership, basketball has taught me lessons that apply way beyond the court—like how to pretend I meant to do that.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h3>Training Arc</h3>
+                <p>Every great player has a montage. Mine includes missed shots, random bursts of confidence, and the occasional moment of greatness. Progress is progress.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Tableau -->
+    <div class='tableauPlaceholder' id='viz1' style='position: relative'>
+      <noscript>
+        <a href='#'>
+          <img alt='Tableau Viz' 
+          src='https://public.tableau.com/static/images/Re/RegionalSampleWorkbook/Storms/1.png' 
+          style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz' width='100%' height='600'>
+        <param name='host_url' value='https://public.tableau.com/' />
+        <param name='embed_code_version' value='3' />
+        <param name='path' value='views/RegionalSampleWorkbook/Storms' />
+        <param name='toolbar' value='yes' />
+      </object>
+    </div>
+
+    <script src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+        <a href="#top" class="btn btn-dark btn-custom">Back to Top</a>
+        <a href="app.html" class="btn btn-primary btn-custom">Go to My Web App</a>
+        <a href="index.html" class="btn btn-secondary btn-custom">Back to Home</a>
+    </div>
+
 </div>
-
-<div class="box2">
-    <h3>Skills I've Developed</h3>
-    <p>Through playing basketball, I have developed important skills such as communication, quick decision-making, and leadership. These skills translate into both school and future career settings.</p>
-</div>
-
-<div class="box3">
-    <h3>Training and Improvement</h3>
-    <p>I enjoy working on my game by practicing shooting, ball handling, and conditioning. Consistent training has helped me improve over time and taught me the value of hard work.</p>
-</div>
-
-    <!-- Tableau Graph -->
-  <div class='tableauPlaceholder' id='viz1' style='position: relative'>
-  <noscript>
-    <a href='#'>
-      <img alt='Tableau Viz' 
-      src='https://public.tableau.com/static/images/Re/RegionalSampleWorkbook/Storms/1.png' 
-      style='border: none' />
-    </a>
-  </noscript>
-  <object class='tableauViz' width='100%' height='600'>
-    <param name='host_url' value='https://public.tableau.com/' />
-    <param name='embed_code_version' value='3' />
-    <param name='path' value='views/RegionalSampleWorkbook/Storms' />
-    <param name='toolbar' value='yes' />
-  </object>
-</div>
-
-<script src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-
-    <!-- Anchor link -->
-    <p><a href="#top">Back to Top</a></p>
-
-    <!-- Link to web app -->
-    <p><a href="app.html">Go to My Web App</a></p>
-
-    <!-- Link back to main site -->
-    <p><a href="index.html">Back to Home Page</a></p>
 
 </body>
 </html>
